@@ -5,3 +5,5 @@
         %h1 Categories
       .col-12
         = render partial: "categories/category", collection: @categories, as: :category
+      .col-12
+        = link_to "Создать Категорию", new_category_path, class: "btn btn-primary", id: "newCategory"
