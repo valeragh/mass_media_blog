@@ -17,7 +17,7 @@ RSpec.describe CategoriesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
 
-    it "renders the show template" do
+    it "renders the index template" do
       get :index
       expect(response).to render_template("index")
       expect(response.body).to eq ""

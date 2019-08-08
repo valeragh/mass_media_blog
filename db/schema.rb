@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20190808063941) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "category_posts", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "file"
