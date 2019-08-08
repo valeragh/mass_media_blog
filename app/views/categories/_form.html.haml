@@ -1,4 +1,4 @@
 = simple_form_for @category do |f|
   = f.input :name, input_html: { placeholder: "Название", class: "form-control"}, label: false
   = f.input :description, input_html: { placeholder: "Описание", class: "form-control", rows: "3"}, label: false
-  = f.button :button, "Создать", class: "btn btn-success", id: "submitCategory", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Создание..."}
+  = f.button :button, "Сохранить", class: "btn btn-success", id: "submitCategory", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Сохранение..."}

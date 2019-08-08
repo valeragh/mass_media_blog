@@ -1,4 +1,11 @@
-%h1
-  = @category.name
-%p
-  = simple_format(@category.description)
+%section.category-section
+  .container
+    .row
+      .col-12
+        %h1
+          = @category.name
+        %p
+          = simple_format(@category.description)
+      .col-12
+        = link_to "Редактировать", edit_category_path(@category), class: "btn btn-wrning", id: "editCategory"
+        = link_to "Удалить", category_path(@category), method: :delete, id: "deleteCategory", data: { confirm: 'Are you certain you want to delete this?' }
