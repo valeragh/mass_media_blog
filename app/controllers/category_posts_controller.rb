@@ -6,6 +6,7 @@ class CategoryPostsController < ApplicationController
   end
 
   def show
+    @categories = @category_post.categories
   end
 
   def edit
@@ -56,7 +57,7 @@ class CategoryPostsController < ApplicationController
   private
 
   def category_post_params
-  	params.require(:category_post).permit(:name, :description, :file)
+  	params.require(:category_post).permit(:name, :description, :file, :category_ids =>[])
   end
 
   def set_category_post

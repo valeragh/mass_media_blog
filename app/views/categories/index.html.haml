@@ -1,9 +1,9 @@
-%section.category-section
+%section.category-section.my-4
   .container
     .row
       .col-12
         %h1 Categories
-      .col-12
+      .col-12.mb-4
         = render partial: "categories/category", collection: @categories, as: :category
       .col-12
         = link_to "Создать Категорию", new_category_path, class: "btn btn-primary", id: "newCategory"

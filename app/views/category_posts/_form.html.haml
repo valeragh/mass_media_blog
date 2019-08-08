@@ -2,4 +2,5 @@
   = f.input :name, input_html: { placeholder: "Заголовок", class: "form-control"}, label: false
   = f.input :description, input_html: { placeholder: "Описание", class: "form-control", rows: "3"}, label: false
   = f.input :file, label: false
+  = f.input :category_ids, as: :check_boxes, collection: Category.all.map { |m| [m.name, m.id] }, label: "Categories"
   = f.button :button, "Сохранить", class: "btn btn-success", id: "submitCategoryPost", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Сохранение..."}
