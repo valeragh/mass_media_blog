@@ -69,3 +69,7 @@ group :test do
   gem "launchy", "~> 2.4.2"
   gem "database_cleaner", "~> 1.6.0"
 end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end

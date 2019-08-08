@@ -1,0 +1,7 @@
+%section.categories-section
+  .container
+    .row
+      .col-12
+        %h1 Categories
+      .col-12
+        = render partial: "categories/category", collection: @categories, as: :category
