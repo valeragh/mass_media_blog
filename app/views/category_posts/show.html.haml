@@ -1,2 +1,13 @@
-%h1 Posts#show
-%p Find me in app/views/posts/show.html.haml
+%section.category_post-post-section
+  .container
+    .row
+      .col-12.col-md-8.col-lg-6
+        %h1
+          = @category_post.name
+        .image-post
+          = image_tag @category_post.file, class: "img-fluid"
+        %p
+          = simple_format(@category_post.description)
+      .col-12
+        = link_to "Редактировать", edit_category_post_path(@category_post), class: "btn btn-wrning", id: "editCategoryPost"
+        = link_to "Удалить", category_post_path(@category_post), method: :delete, id: "deleteCategoryPost", data: { confirm: 'Are you certain you want to delete this?' }

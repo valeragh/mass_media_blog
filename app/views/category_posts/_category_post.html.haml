@@ -1,0 +1,10 @@
+= link_to category_post_path(category_post) do
+  .col-12.col-md-6.col-lg-4.col-xl-3
+    .card
+      = image_tag category_post.file, class: "img-fluid"
+      .card-body
+        %h5.card-title
+          = category_post.name
+        %p
+          = category_post.description.truncate(50) if category_post.description.present?
+

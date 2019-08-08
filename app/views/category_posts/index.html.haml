@@ -1,2 +1,8 @@
-%h1 Posts#index
-%p Find me in app/views/posts/index.html.haml
+%section.category_post_posts-section
+  .container
+    .row
+      .col-12
+        %h1 Posts
+      = render partial: "category_posts/category_post", collection: @category_posts, as: :category_post
+      .col-12
+        = link_to "Создать Пост", new_category_post_path, class: "btn btn-primary", id: "newCategoryPost"
