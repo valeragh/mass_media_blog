@@ -28,4 +28,29 @@ feature 'category page' do
 		expect(page).to have_css('em', text: 'was')
 	end
 
+	scenario 'show category comment' do
+		category = create(:category)
+		comment = create(:comment,
+			author: 'First Author .',
+			content: 'First content',
+		  commentable_type: "Category",
+		  commentable_id: category.id)
+		visit("/categories/#{category.id}")
+
+		expect(page).to have_content("First Author .")
+		expect(page).to have_content("First content")
+	end
+
+	scenario 'create category comment', :js => true do
+		category = create(:category)
+		visit("/categories/#{category.id}")
+
+		fill_in('comment_author', with: 'First Author .')
+		fill_in('comment_content', with: 'First content')
+		click_on('submitCommit')
+
+		expect(page).to have_content("First Author .")
+		expect(page).to have_content("First content")
+	end
+
 end

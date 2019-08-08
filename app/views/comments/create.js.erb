@@ -1,0 +1,2 @@
+$('#comments').html("<%= j (render partial: 'comments/comments', locals: {commentable: @commentable} ) %>");
+$('#new_comment')[0].reset();

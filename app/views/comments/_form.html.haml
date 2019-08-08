@@ -1,0 +1,4 @@
+= simple_form_for [commentable, Comment.new], remote: true do |f|
+  = f.input :author, input_html: { placeholder: "Имя", class: "form-control"}, label: false
+  = f.input :content, input_html: { placeholder: "Комментарий", class: "form-control"}, label: false
+  = f.button :button, "Сохранить", class: "btn btn-success", id: "submitCommit", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Сохранение..."}

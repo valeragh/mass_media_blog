@@ -1,0 +1,7 @@
+%h3.mb-4 Комментарии
+- commentable.comments.each do |comment|
+  .media.mb-4
+    %span.mr-3
+      = comment.author
+    .media-body
+      = comment.content

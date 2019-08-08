@@ -1,4 +1,4 @@
-%section.category-section
+%section.category-section.my-4
   .container
     .row
       .col-12
@@ -14,3 +14,10 @@
         %h1 Posts
       = render partial: "category_posts/category_post", collection: @category_posts, as: :category_post
 
+%section.comments-section
+  .container
+    .row
+      .col-12
+        #comments.mb-4
+          = render partial: "comments/comments", locals: {commentable: @category}
+        = render partial: "comments/form", locals: {commentable: @category}
